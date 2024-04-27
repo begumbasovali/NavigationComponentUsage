@@ -11,12 +11,32 @@
         android:label="fragment_home_page"
         tools:layout="@layout/fragment_home_page" >
         <action
-            android:id="@+id/action_homePageFragment_to_detailFragment"
+            android:id="@+id/passingDetail"
             app:destination="@id/detailFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.navigationcompusage.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="no name" />
+        <argument
+            android:name="age"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="height"
+            app:argType="float"
+            android:defaultValue="0.0" />
+        <argument
+            android:name="student"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="product"
+            app:argType="com.example.navigationcompusage.Products" />
+    </fragment>
 </navigation>
